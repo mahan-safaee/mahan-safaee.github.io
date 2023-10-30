@@ -1,0 +1,25 @@
+th {
+    padding: 6px 10px;
+}
+
+table {
+    border: 3px yellow dotted;
+    background-color: maroon;
+    color: whitesmoke;
+    padding: 8px;
+}
+
+img {
+    margin: 6px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding-right: 10px;
+    border: 3px;
+    border-bottom: 20px;
+
+}

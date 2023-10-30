@@ -1,3 +1,7 @@
 # .gitignore
 todo*
 *.txt
+# hovercraft-generated directories from yoosofan/slide/web
+html/
+rst/
+css/

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>simple RST</title>
+<style type="text/css">
+
+/* body {
+    color: white;
+    background-color: black;
+} */
+
+.logo-img {
+    border: 3px solid blue;
+}
+
+.table-header-invert-others-lblue {
+    border: 6px dotted magenta;
+}
+
+.table-header-invert-others-lblue th {
+    background-color: white;
+    color: black;
+    padding: 4px;
+}
+
+.table-header-invert-others-lblue td {
+    color: lightblue;
+    background-color: darkred;
+    padding: 4px;
+}
+
+.embedded {
+    margin: 10px;
+    padding: 20px;
+    width: 35%;
+    border: 6px white solid;
+}
+</style>
+</head>
+<body>
+<main id="simple-rst">
+<h1 class="title">simple RST</h1>
+
+<ul class="simple">
+<li><dl class="simple">
+<dt>مزایای rst</dt>
+<dd><ol class="arabic simple">
+<li><p>سادگی</p></li>
+<li><p>تسریع کار</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+<p>you can export an <a class="reference internal" href="#rst">rst</a> file to an <a class="reference internal" href="#html">html</a> file</p>
+<p>simple python program:</p>
+<pre class="code python literal-block"><code><span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string double">&quot;hello, world!&quot;</span><span class="punctuation">)</span></code></pre>
+<img alt="python logo" class="logo-img align-left" src="logo.png" style="width: 232.0px; height: 65.60000000000001px;" />
+<div class="embedded"><form method="post">
+    <fieldset>
+        <legend>Personal:</legend>
+        <label for="uname">Username:</label>
+        <input type="text" name="uname" />
+        <label for="pw">Password:</label>
+        <input type="password" name="pw" />
+    </fieldset>
+    <label for="genre">Genre:</label>
+    <select name="genre">
+        <optgroup label="Rock">
+            <option value="altrock">Alternative Rock</option>
+            <option value="grungerock"> Grunge Rock</option>
+        </optgroup>
+        <optgroup label="Pop">
+            <option value="pop">Pop</option>
+            <option value="dreampop">Dream Pop</option>
+        </optgroup>
+    </select>
+</form>
+</div><table class="table-header-invert-others-lblue">
+<caption>یک جدول</caption>
+<colgroup>
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr><th class="head"><p>ادراک</p></th>
+<th class="head"><p>اقدام</p></th>
+</tr>
+</thead>
+<tbody>
+<tr><td><p>[A, dirty]</p></td>
+<td><p>cleanse</p></td>
+</tr>
+<tr><td><p>[B, dirty]</p></td>
+<td><p>cleanse</p></td>
+</tr>
+<tr><td><p>[A, clean]</p></td>
+<td><p>go to B</p></td>
+</tr>
+<tr><td><p>[B, clean]</p></td>
+<td><p>go to A</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="code rst literal-block"><small class="ln"> 1 </small><code data-lineno=" 1 "><span class="generic heading">#############</span>
+</code><small class="ln"> 2 </small><code data-lineno=" 2 "><span class="generic heading">simple RST</span>
+</code><small class="ln"> 3 </small><code data-lineno=" 3 "><span class="generic heading">#############</span>
+</code><small class="ln"> 4 </small><code data-lineno=" 4 ">
+</code><small class="ln"> 5 </small><code data-lineno=" 5 "><span class="literal number">-</span> مزایای rst<span class="whitespace">
+</span></code><small class="ln"> 6 </small><code data-lineno=" 6 "><span class="whitespace"></span>    <span class="literal number">#.</span> سادگی<span class="whitespace">
+</span></code><small class="ln"> 7 </small><code data-lineno=" 7 "><span class="whitespace"></span>    <span class="literal number">#.</span> تسریع کار<span class="whitespace">
+</span></code><small class="ln"> 8 </small><code data-lineno=" 8 "><span class="whitespace">
+</span></code><small class="ln"> 9 </small><code data-lineno=" 9 "><span class="whitespace"></span>you can export an rst_ file to an html_ file<span class="whitespace">
+</span></code><small class="ln">10 </small><code data-lineno="10 "><span class="whitespace">
+</span></code><small class="ln">11 </small><code data-lineno="11 "><span class="whitespace"></span>simple python program:<span class="whitespace">
+</span></code><small class="ln">12 </small><code data-lineno="12 "><span class="whitespace">
+</span></code><small class="ln">13 </small><code data-lineno="13 "><span class="whitespace">
+</span></code><small class="ln">14 </small><code data-lineno="14 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">code</span><span class="punctuation">::</span> <span class="keyword">python</span>
+</code><small class="ln">15 </small><code data-lineno="15 ">
+</code><small class="ln">16 </small><code data-lineno="16 ">    <span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string double">&quot;hello, world!&quot;</span><span class="punctuation">)</span><span class="whitespace">
+</span></code><small class="ln">17 </small><code data-lineno="17 "><span class="whitespace">
+</span></code><small class="ln">18 </small><code data-lineno="18 "><span class="whitespace">
+</span></code><small class="ln">19 </small><code data-lineno="19 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">image</span><span class="punctuation">::</span> logo.png<span class="whitespace">
+</span></code><small class="ln">20 </small><code data-lineno="20 "><span class="whitespace"></span>    <span class="name class">:class:</span> logo-img<span class="whitespace">
+</span></code><small class="ln">21 </small><code data-lineno="21 "><span class="whitespace"></span>    <span class="name class">:scale:</span> 40 %<span class="whitespace">
+</span></code><small class="ln">22 </small><code data-lineno="22 "><span class="whitespace"></span>    <span class="name class">:alt:</span> python logo<span class="whitespace">
+</span></code><small class="ln">23 </small><code data-lineno="23 "><span class="whitespace"></span>    <span class="name class">:align:</span> left<span class="whitespace">
+</span></code><small class="ln">24 </small><code data-lineno="24 "><span class="whitespace">
+</span></code><small class="ln">25 </small><code data-lineno="25 "><span class="whitespace">
+</span></code><small class="ln">26 </small><code data-lineno="26 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">raw</span><span class="punctuation">::</span> html<span class="whitespace">
+</span></code><small class="ln">27 </small><code data-lineno="27 "><span class="whitespace"></span>    <span class="name class">:class:</span> embedded<span class="whitespace">
+</span></code><small class="ln">28 </small><code data-lineno="28 "><span class="whitespace"></span>    <span class="name class">:file:</span> ./emb.html<span class="whitespace">
+</span></code><small class="ln">29 </small><code data-lineno="29 "><span class="whitespace">
+</span></code><small class="ln">30 </small><code data-lineno="30 "><span class="whitespace">
+</span></code><small class="ln">31 </small><code data-lineno="31 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">list-table</span><span class="punctuation">::</span> یک جدول<span class="whitespace">
+</span></code><small class="ln">32 </small><code data-lineno="32 "><span class="whitespace"></span>    <span class="name class">:widths:</span> 15 10<span class="whitespace">
+</span></code><small class="ln">33 </small><code data-lineno="33 "><span class="whitespace"></span>    <span class="name class">:header-rows:</span> 1<span class="whitespace">
+</span></code><small class="ln">34 </small><code data-lineno="34 "><span class="whitespace"></span>    <span class="name class">:class:</span> table-header-invert-others-lblue<span class="whitespace">
+</span></code><small class="ln">35 </small><code data-lineno="35 "><span class="whitespace"></span>
+</code><small class="ln">36 </small><code data-lineno="36 ">    <span class="literal number">*</span> - ادراک<span class="whitespace">
+</span></code><small class="ln">37 </small><code data-lineno="37 "><span class="whitespace"></span>      <span class="literal number">-</span> اقدام<span class="whitespace">
+</span></code><small class="ln">38 </small><code data-lineno="38 "><span class="whitespace"></span>    <span class="literal number">*</span> - [A, dirty]<span class="whitespace">
+</span></code><small class="ln">39 </small><code data-lineno="39 "><span class="whitespace"></span>      <span class="literal number">-</span> cleanse<span class="whitespace">
+</span></code><small class="ln">40 </small><code data-lineno="40 "><span class="whitespace"></span>    <span class="literal number">*</span> - [B, dirty]<span class="whitespace">
+</span></code><small class="ln">41 </small><code data-lineno="41 "><span class="whitespace"></span>      <span class="literal number">-</span> cleanse<span class="whitespace">
+</span></code><small class="ln">42 </small><code data-lineno="42 "><span class="whitespace"></span>    <span class="literal number">*</span> - [A, clean]<span class="whitespace">
+</span></code><small class="ln">43 </small><code data-lineno="43 "><span class="whitespace"></span>      <span class="literal number">-</span> go to B<span class="whitespace">
+</span></code><small class="ln">44 </small><code data-lineno="44 "><span class="whitespace"></span>    <span class="literal number">*</span> - [B, clean]<span class="whitespace">
+</span></code><small class="ln">45 </small><code data-lineno="45 "><span class="whitespace"></span>      <span class="literal number">-</span> go to A<span class="whitespace">
+</span></code><small class="ln">46 </small><code data-lineno="46 "><span class="whitespace">
+</span></code><small class="ln">47 </small><code data-lineno="47 "><span class="whitespace">
+</span></code><small class="ln">48 </small><code data-lineno="48 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">include</span><span class="punctuation">::</span> ./rst.rst<span class="whitespace">
+</span></code><small class="ln">49 </small><code data-lineno="49 "><span class="whitespace"></span>    <span class="name class">:number-lines:</span><span class="whitespace">
+</span></code><small class="ln">50 </small><code data-lineno="50 "><span class="whitespace"></span>    <span class="name class">:code:</span> rst<span class="whitespace">
+</span></code><small class="ln">51 </small><code data-lineno="51 "><span class="whitespace">
+</span></code><small class="ln">52 </small><code data-lineno="52 "><span class="whitespace">
+</span></code><small class="ln">53 </small><code data-lineno="53 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_rst:</span><span class="whitespace">
+</span></code><small class="ln">54 </small><code data-lineno="54 "><span class="whitespace">
+</span></code><small class="ln">55 </small><code data-lineno="55 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_html:</span></code></pre>
+<span class="target" id="html"><span id="rst"></span></span>
+</main>
+</body>
+</html>
