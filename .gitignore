@@ -2,6 +2,7 @@
 todo*
 *.txt
 # hovercraft-generated directories from yoosofan/slide/web
-html/
-rst/
-css/
+rsts-out/
+run.sh
+*.py
+*todo*

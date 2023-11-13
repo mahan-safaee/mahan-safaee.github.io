@@ -23,3 +23,22 @@ h1 {
     border-bottom: 20px;
 
 }
+
+td>a>img {
+    width: 13vmax;
+    padding: 6px;
+    border: 1px blue groove;
+}
+
+footer>a {
+    color: black;
+}
+
+#first-div:has(b[title]) a {
+    color: red;
+}
+
+#first-div,
+div:has(>p>b+bdo) {
+    margin-right: 40px;
+}
