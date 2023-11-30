@@ -2,6 +2,8 @@
 simple RST
 #############
 
+`بازگشت به خانه`_
+
 - مزایای rst
     #. سادگی 
     #. تسریع کار
@@ -49,6 +51,7 @@ simple python program:
     :number-lines:
     :code: rst
 
+.. _بازگشت به خانه: ./
 
 .. _rst:
 

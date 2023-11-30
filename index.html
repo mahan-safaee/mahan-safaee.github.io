@@ -9,7 +9,6 @@
         function bodyloader() {
             let pichover = document.querySelector("#pichover");
             pichover.style.display = 'none';
-            targetsel = 'a'
             document.querySelectorAll("main td:has(>a)").forEach((pic) => {
                 pic.addEventListener('mousemove', (e) => {
                     pichover.style.left = (e.pageX + 10) + 'px';
@@ -31,15 +30,15 @@
         <h1>خوش آمدید</h1>
         <nav id="top">
             <ul type="square">
-                <!-- TODO grid menu -->
+                <!-- TODO fixed grid menu -->
                 <li><a href="./dinos.html">
                         صفحه‌ی دایناسور‌ها
                     </a></li>
-                <li><a href="./birds.html">
-                        صفحه‌ی پرندگان
-                    </a></li>
                 <li><a href="./crocs.html">
                         صفحه‌ی تمساح‌ها
+                    </a></li>
+                <li><a href="./birds.html">
+                        صفحه‌ی پرندگان
                     </a></li>
                 <li><a href="./rst.html">
                         مشاهده فایل ‌rst
@@ -52,6 +51,30 @@
         <div id="pichover">
             عکس‌ها قابل کلیک هستند.
         </div>
+        <!-- TODO add more content in birds -->
+        <!-- TODO add more content in dinos -->
+        <!-- TODO add content in crocs -->
+        <!-- TODO make printable -->
+        <!-- TODO add grid in pages -->
+        <!-- TODO add grid in rst -->
+        <!-- TODO add onClick usage -->
+        <article>
+            <section>
+                <p>
+                    این وب‌گاه با هدف خاصی تشکیل نشده‌است
+                    و برای تکلیف درس مباحث ویژه استفاده
+                    می‌شود. از ۳ موضوع تقریبا غیر مرتبط
+                    <a href="./crocs.html">تمساح‌ها</a>،
+                    <a href="./birds.html">پرندگان</a> و
+                    <a href="./dinos.html">دایناسورها</a>
+                    برای تولید محتوا استفاده شده‌است.برای
+                    افزایش حجم مطالب این صفحه، صفحات دیگر را
+                    به صورت iframe
+                    در اینجا نیز قرار می‌دهیم.
+                </p>
+                <p></p>
+            </section>
+        </article>
         <center>
             <table border="2px">
                 <thead>
@@ -76,6 +99,23 @@
                 </tbody>
             </table>
         </center>
+        <hr />
+        <details>
+            <summary>دایناسور‌ها</summary>
+            <iframe src="./dinos.html" frameborder="0"></iframe>
+        </details>
+        <hr />
+        <details open>
+            <summary>تمساح‌ها</summary>
+            <iframe src="./crocs.html" frameborder="0"></iframe>
+        </details>
+        <hr />
+        <details>
+            <summary>پرندگان</summary>
+            <iframe src="./birds.html" frameborder="0"></iframe>
+        </details>
+        <hr />
+
     </main>
     <aside></aside>
     <br />
