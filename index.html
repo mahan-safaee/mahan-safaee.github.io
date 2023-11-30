@@ -3,49 +3,75 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>صفحۀ اصلی</title>
+    <script>
+        function bodyloader() {
+            let pichover = document.querySelector("#pichover");
+            pichover.style.display = 'none';
+            targetsel = 'a'
+            document.querySelectorAll("main td:has(>a)").forEach((pic) => {
+                pic.addEventListener('mousemove', (e) => {
+                    pichover.style.left = (e.pageX + 10) + 'px';
+                    pichover.style.top = (e.pageY - 10) + 'px';
+                });
+                pic.addEventListener('mouseout', (e) => {
+                    pichover.style.display = 'none';
+                });
+                pic.querySelector('a').addEventListener('mouseenter', (e) => {
+                    pichover.style.display = 'block';
+                });
+            });
+        }
+    </script>
 </head>
 
-<body>
+<body onload="bodyloader();">
     <header>
         <h1>خوش آمدید</h1>
         <nav id="top">
             <ul type="square">
+                <!-- TODO grid menu -->
                 <li><a href="./dinos.html">
                         صفحه‌ی دایناسور‌ها
                     </a></li>
-                <li><a href="./rst.html">
-                        مشاهده فایل ‌rst
-                    </a></li>
                 <li><a href="./birds.html">
                         صفحه‌ی پرندگان
+                    </a></li>
+                <li><a href="./crocs.html">
+                        صفحه‌ی تمساح‌ها
+                    </a></li>
+                <li><a href="./rst.html">
+                        مشاهده فایل ‌rst
                     </a></li>
             </ul>
         </nav>
     </header>
     <hr />
     <main>
+        <div id="pichover">
+            عکس‌ها قابل کلیک هستند.
+        </div>
         <center>
             <table border="2px">
                 <thead>
                     <tr>
                         <th>دایناسور‌ها</th>
+                        <th>تمساح‌ها</th>
                         <th>پرندگان</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <a href="./dinos.html">
-                                <img src="./dinos.jpg" alt="عکس دایناسور‌ها" />
-                            </a>
-                        </td>
-                        <td>
-                            <a href="./birds.html">
-                                <img src="./birds.png" alt="عکس پرندگان" />
-                            </a>
-                        </td>
+                        <td><a href="./dinos.html">
+                                <img src="./dinos.jpg" alt="دایناسور‌ها" />
+                            </a></td>
+                        <td><a href="./crocs.html">
+                                <img src="./crocs.jpg" alt="تمساح‌ها" />
+                            </a></td>
+                        <td><a href="./birds.html">
+                                <img src="./birds.png" alt="پرندگان" />
+                            </a></td>
                     </tr>
                 </tbody>
             </table>
@@ -57,7 +83,5 @@
         <a href="#top">برگشت به بالا</a>
     </footer>
 </body>
-
-</html>
 
 </html>

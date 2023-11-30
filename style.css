@@ -42,3 +42,11 @@ footer>a {
 div:has(>p>b+bdo) {
     margin-right: 40px;
 }
+
+#pichover {
+    background-color: rgba(236, 178, 204, 0.8);
+    color: darkgreen;
+    position: absolute;
+    display: none;
+    padding: 4px;
+}
