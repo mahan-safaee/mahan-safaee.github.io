@@ -9,7 +9,7 @@ table {
     padding: 8px;
 }
 
-img {
+img:not(.changer) {
     margin: 6px;
 }
 
@@ -50,6 +50,7 @@ div:has(>p>b+bdo) {
     position: absolute;
     display: none;
     padding: 4px;
+    z-index: 2;
 }
 
 body {
@@ -61,4 +62,16 @@ iframe {
     overflow: auto;
     height: 400px;
     width: 100%;
+}
+
+:root {
+    --resizer-h: 10px;
+    --resizer-scale: 2;
+}
+
+.changer {
+    height: var(--resizer-h);
+    width: calc(var(--resizer-h) * var(--resizer-scale));
+    object-fit: cover;
+    cursor: pointer;
 }
