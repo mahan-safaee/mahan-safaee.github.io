@@ -1,8 +1,73 @@
 .mythead,
 .mytable {
-    padding: 6px 10px;
+    padding: 1%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-bottom: 3px black dashed;
+    background-color: #321457a0;
+    z-index: 5;
+}
+
+nav ul {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-rows: minmax(50px, auto);
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width:500px) {
+    nav ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav {
+        position: static;
+    }
+}
+
+
+@media (min-width:500px) and (max-width:600px) {
+    nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav ul li:nth-child(3n) {
+        grid-row: 1/3;
+    }
+
+    nav ul li:nth-child(n+4) {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+}
+
+@media (min-width:600px) {
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+nav ul li {
+    display: grid;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 2px;
+    text-align: center;
+    align-content: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: yellowgreen;
 
 }
 
@@ -15,6 +80,12 @@
 .mythead {
     grid-template-areas: "dino_h bird_h croc_h";
     grid-area: mythead;
+    font-size: min(16px, 5vw);
+}
+
+.mythead .mycell {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mytable,
@@ -22,12 +93,7 @@
     border: 3px yellow dotted;
     background-color: maroon;
     color: whitesmoke;
-    padding: 8px;
-}
-
-
-img:not(.changer) {
-    margin: 6px;
+    box-sizing: border-box;
 }
 
 hr {
@@ -36,14 +102,14 @@ hr {
 
 h1 {
     padding-right: 10px;
-    border: 3px;
-    border-bottom: 20px;
-
 }
 
-.mytable a>img {
-    width: 13vmax;
+.mytable a img {
+    --marg: 5%;
+    max-width: calc(100% - var(--marg)*2);
     padding: 6px;
+    margin: var(--marg);
+    box-sizing: border-box;
     border: 1px blue groove;
 }
 
