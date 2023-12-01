@@ -1,13 +1,30 @@
-th {
+.mythead,
+.mytable {
     padding: 6px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
 }
 
-table {
+.mytable {
+    grid-template-areas:
+        "mythead mythead mythead"
+        "dino_c bird_c croc_c";
+}
+
+.mythead {
+    grid-template-areas: "dino_h bird_h croc_h";
+    grid-area: mythead;
+}
+
+.mytable,
+.mycell {
     border: 3px yellow dotted;
     background-color: maroon;
     color: whitesmoke;
     padding: 8px;
 }
+
 
 img:not(.changer) {
     margin: 6px;
@@ -24,7 +41,7 @@ h1 {
 
 }
 
-td>a>img {
+.mytable a>img {
     width: 13vmax;
     padding: 6px;
     border: 1px blue groove;
@@ -74,4 +91,8 @@ iframe {
     width: calc(var(--resizer-h) * var(--resizer-scale));
     object-fit: cover;
     cursor: pointer;
+}
+
+#shuffler {
+    margin-bottom: 5px;
 }

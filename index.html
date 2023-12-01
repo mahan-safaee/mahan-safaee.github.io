@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>صفحۀ اصلی</title>
     <script>
+        let categories = "croc bird dino".split(" ");
+        let rows = "h c".split(" ");
         function bodyloader() {
             let pichover = document.querySelector("#pichover");
             pichover.style.display = 'none';
-            document.querySelectorAll("main td:has(>a)").forEach((pic) => {
+            // image hover shower
+            document.querySelectorAll("main .mycell:has(>a)").forEach((pic) => {
                 pic.addEventListener('mousemove', (e) => {
                     pichover.style.left = (e.pageX + 10) + 'px';
                     pichover.style.top = (e.pageY - 10) + 'px';
@@ -21,7 +24,37 @@
                     pichover.style.display = 'block';
                 });
             });
+            //grid maker
+            categories.forEach((cat) => {
+                rows.forEach((row) => {
+                    var name = cat + "_" + row;
+                    console.log(name);
+                    document.querySelector("." + name)
+                        .style.gridArea = name;
+                });
+            });
         }
+        function gridShuffler() {
+            let shuffled = categories
+                .map(value => ({ value, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({ value }) => value)
+            let shuffled_c = shuffled.map(item => item + "_c").join(" ");
+            let shuffled_h = shuffled.map(item => item + "_h").join(" ");
+            document
+                .querySelector(".mythead")
+                .style
+                .gridTemplateAreas = (
+                    '"' + shuffled_h + '"'
+                );
+            document
+                .querySelector(".mytable")
+                .style
+                .gridTemplateAreas = (
+                    '"mythead mythead mythead" "'
+                    + shuffled_c + '"'
+                );
+        };
     </script>
 </head>
 
@@ -48,9 +81,6 @@
     </header>
     <hr />
     <main>
-        <div id="pichover">
-            عکس‌ها قابل کلیک هستند.
-        </div>
         <!-- TODO make printable -->
         <!-- TODO add grid in pages -->
         <!-- TODO add grid in rst -->
@@ -72,28 +102,34 @@
             </section>
         </article>
         <center>
-            <table border="2px">
-                <thead>
-                    <tr>
-                        <th>دایناسور‌ها</th>
-                        <th>تمساح‌ها</th>
-                        <th>پرندگان</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="./dinos.html">
-                                <img src="./dinos.jpg" alt="دایناسور‌ها" />
-                            </a></td>
-                        <td><a href="./crocs.html">
-                                <img src="./crocs.jpg" alt="تمساح‌ها" />
-                            </a></td>
-                        <td><a href="./birds.html">
-                                <img src="./birds.png" alt="پرندگان" />
-                            </a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="pichover">
+                عکس‌ها قابل کلیک هستند.
+            </div>
+            <button onclick="gridShuffler();" id="shuffler" type="button">
+                shuffle
+            </button>
+            <div class="mytable" border="2px">
+                <div class="mythead">
+                    <div class="mycell dino_h">دایناسور‌ها</div>
+                    <div class="mycell croc_h">تمساح‌ها</div>
+                    <div class="mycell bird_h">پرندگان</div>
+                </div>
+                <div class="mycell dino_c">
+                    <a href="./dinos.html">
+                        <img src="./dinos.jpg" alt="دایناسور‌ها" />
+                    </a>
+                </div>
+                <div class="mycell croc_c">
+                    <a href="./crocs.html">
+                        <img src="./crocs.jpg" alt="تمساح‌ها" />
+                    </a>
+                </div>
+                <div class="mycell bird_c">
+                    <a href="./birds.html">
+                        <img src="./birds.png" alt="پرندگان" />
+                    </a>
+                </div>
+            </div>
         </center>
         <hr />
         <details>
