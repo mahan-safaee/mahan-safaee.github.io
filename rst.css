@@ -24,3 +24,8 @@
     width: 35%;
     border: 6px white solid;
 }
+
+.grid-table td {
+    text-align: center;
+    border: 2px solid orangered;
+}

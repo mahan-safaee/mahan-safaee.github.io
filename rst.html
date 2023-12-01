@@ -33,6 +33,11 @@
     width: 35%;
     border: 6px white solid;
 }
+
+.grid-table td {
+    text-align: center;
+    border: 2px solid orangered;
+}
 </style>
 </head>
 <body>
@@ -101,6 +106,29 @@
 </tr>
 </tbody>
 </table>
+<table class="grid-table">
+<caption>test grid</caption>
+<colgroup>
+<col style="width: 30.4%" />
+<col style="width: 21.7%" />
+<col style="width: 23.9%" />
+<col style="width: 23.9%" />
+</colgroup>
+<tbody>
+<tr><td><p>r1, c1</p></td>
+<td><p>c2</p></td>
+<td><p>c3</p></td>
+<td><p>c4</p></td>
+</tr>
+<tr><td><p>r2</p></td>
+<td colspan="3"><p>rst is short for ReStructuredText</p></td>
+</tr>
+<tr><td><p>r3</p></td>
+<td></td>
+<td colspan="2"><p><img alt="resize_pic" src="./resize.png" style="width: 20pt;" /></p></td>
+</tr>
+</tbody>
+</table>
 <pre class="code rst literal-block"><small class="ln"> 1 </small><code data-lineno=" 1 "><span class="generic heading">#############</span>
 </code><small class="ln"> 2 </small><code data-lineno=" 2 "><span class="generic heading">simple RST</span>
 </code><small class="ln"> 3 </small><code data-lineno=" 3 "><span class="generic heading">#############</span>
@@ -150,15 +178,34 @@
 </span></code><small class="ln">47 </small><code data-lineno="47 "><span class="whitespace"></span>      <span class="literal number">-</span> go to A<span class="whitespace">
 </span></code><small class="ln">48 </small><code data-lineno="48 "><span class="whitespace">
 </span></code><small class="ln">49 </small><code data-lineno="49 "><span class="whitespace">
-</span></code><small class="ln">50 </small><code data-lineno="50 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">include</span><span class="punctuation">::</span> ./rst.rst<span class="whitespace">
-</span></code><small class="ln">51 </small><code data-lineno="51 "><span class="whitespace"></span>    <span class="name class">:number-lines:</span><span class="whitespace">
-</span></code><small class="ln">52 </small><code data-lineno="52 "><span class="whitespace"></span>    <span class="name class">:code:</span> rst<span class="whitespace">
-</span></code><small class="ln">53 </small><code data-lineno="53 "><span class="whitespace">
-</span></code><small class="ln">54 </small><code data-lineno="54 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_بازگشت به خانه:</span> ./<span class="whitespace">
+</span></code><small class="ln">50 </small><code data-lineno="50 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">|resize_pic|</span> <span class="operator word">image</span><span class="punctuation">::</span> ./resize.png<span class="whitespace">
+</span></code><small class="ln">51 </small><code data-lineno="51 "><span class="whitespace"></span>        <span class="name class">:width:</span> 20pt<span class="whitespace">
+</span></code><small class="ln">52 </small><code data-lineno="52 "><span class="whitespace">
+</span></code><small class="ln">53 </small><code data-lineno="53 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">|rst|</span> <span class="operator word">replace</span><span class="punctuation">::</span> ReStructuredText<span class="whitespace">
+</span></code><small class="ln">54 </small><code data-lineno="54 "><span class="whitespace">
 </span></code><small class="ln">55 </small><code data-lineno="55 "><span class="whitespace">
-</span></code><small class="ln">56 </small><code data-lineno="56 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_rst:</span><span class="whitespace">
-</span></code><small class="ln">57 </small><code data-lineno="57 "><span class="whitespace">
-</span></code><small class="ln">58 </small><code data-lineno="58 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_html:</span></code></pre>
+</span></code><small class="ln">56 </small><code data-lineno="56 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">table</span><span class="punctuation">::</span> test grid<span class="whitespace">
+</span></code><small class="ln">57 </small><code data-lineno="57 "><span class="whitespace"></span>    <span class="name class">:class:</span> grid-table<span class="whitespace">
+</span></code><small class="ln">58 </small><code data-lineno="58 "><span class="whitespace"></span>    <span class="name class">:widths:</span> grid<span class="whitespace">
+</span></code><small class="ln">59 </small><code data-lineno="59 "><span class="whitespace">
+</span></code><small class="ln">60 </small><code data-lineno="60 "><span class="whitespace"></span>    +--------------+----------+-----------+-----------+<span class="whitespace">
+</span></code><small class="ln">61 </small><code data-lineno="61 "><span class="whitespace"></span>    <span class="operator">|</span> r1, c1       | c2       |       c3  |     c4    |<span class="whitespace">
+</span></code><small class="ln">62 </small><code data-lineno="62 "><span class="whitespace"></span>    +--------------+----------+-----------+-----------+<span class="whitespace">
+</span></code><small class="ln">63 </small><code data-lineno="63 "><span class="whitespace"></span>    <span class="operator">|</span> r2           |    rst is short for |rst|        |<span class="whitespace">
+</span></code><small class="ln">64 </small><code data-lineno="64 "><span class="whitespace"></span>    <span class="operator">|</span>              |                                  |<span class="whitespace">
+</span></code><small class="ln">65 </small><code data-lineno="65 "><span class="whitespace"></span>    +--------------+----------+-----------+-----------+<span class="whitespace">
+</span></code><small class="ln">66 </small><code data-lineno="66 "><span class="whitespace"></span>    <span class="operator">|</span> r3           |          |      |resize_pic|     |<span class="whitespace">
+</span></code><small class="ln">67 </small><code data-lineno="67 "><span class="whitespace"></span>    +--------------+----------+-----------+-----------+<span class="whitespace">
+</span></code><small class="ln">68 </small><code data-lineno="68 "><span class="whitespace">
+</span></code><small class="ln">69 </small><code data-lineno="69 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="operator word">include</span><span class="punctuation">::</span> ./rst.rst<span class="whitespace">
+</span></code><small class="ln">70 </small><code data-lineno="70 "><span class="whitespace"></span>    <span class="name class">:number-lines:</span><span class="whitespace">
+</span></code><small class="ln">71 </small><code data-lineno="71 "><span class="whitespace"></span>    <span class="name class">:code:</span> rst<span class="whitespace">
+</span></code><small class="ln">72 </small><code data-lineno="72 "><span class="whitespace">
+</span></code><small class="ln">73 </small><code data-lineno="73 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_بازگشت به خانه:</span> ./<span class="whitespace">
+</span></code><small class="ln">74 </small><code data-lineno="74 "><span class="whitespace">
+</span></code><small class="ln">75 </small><code data-lineno="75 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_rst:</span><span class="whitespace">
+</span></code><small class="ln">76 </small><code data-lineno="76 "><span class="whitespace">
+</span></code><small class="ln">77 </small><code data-lineno="77 "><span class="whitespace"></span><span class="punctuation">..</span> <span class="name tag">_html:</span></code></pre>
 <span class="target" id="html"><span id="rst"></span></span>
 </main>
 </body>

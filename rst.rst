@@ -47,6 +47,25 @@ simple python program:
       - go to A
 
 
+.. |resize_pic| image:: ./resize.png
+        :width: 20pt
+
+.. |rst| replace:: ReStructuredText
+
+
+.. table:: test grid
+    :class: grid-table
+    :widths: grid
+
+    +--------------+----------+-----------+-----------+
+    | r1, c1       | c2       |       c3  |     c4    |
+    +--------------+----------+-----------+-----------+
+    | r2           |    rst is short for |rst|        |
+    |              |                                  |
+    +--------------+----------+-----------+-----------+
+    | r3           |          |      |resize_pic|     |
+    +--------------+----------+-----------+-----------+
+
 .. include:: ./rst.rst
     :number-lines:
     :code: rst
